@@ -1,14 +1,17 @@
+/* FORKED FROM ACTIVITREE and removed from meteor */
+/* added back into meteor by meteor add leemind:push */
+
 /* globals Package, Npm, Cordova */
 Package.describe({
-  name: 'activitree:push',
+  name: 'leemind:push',
   version: '2.0.4',
   summary: 'Push Notifications for Cordova and Web/PWA with Firebase (FCM).',
-  git: 'https://github.com/activitree/meteor-push.git'
+  git: 'https://github.com/leemind/meteor-push.git'
 })
 
 Npm.depends({
-  'firebase-admin': '8.6.1',
-  firebase: '7.2.1'
+  'firebase-admin': '8.9.1', // 8.6.1 works
+  firebase: '7.7.0'  // 7.2.1 works
 })
 
 Cordova.depends({
