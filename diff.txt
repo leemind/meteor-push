@@ -1,0 +1,41 @@
+lib/server/pushToDevice.js
+
+@@ -31,12 +31,14 @@ Push.Configure = serverConfig => {
+
+  // Rig FCM connection
+  const admin = require('firebase-admin')
+  console.log("Push: initializeApp databaseURL",serverConfig.firebaseAdmin && serverConfig.firebaseAdmin.databaseURL);
+  const fcm = admin.initializeApp({
+    credential: admin.credential.cert(serverConfig.firebaseAdmin && serverConfig.firebaseAdmin.serviceAccountData),
+    databaseURL: serverConfig.firebaseAdmin && serverConfig.firebaseAdmin.databaseURL
+  })
+
+  const fcmConnections = fcm.messaging() // FCM with Firebase Admin
+  console.log("Push: default app:",fcmConnections);
+  if (serverConfig.firebaseAdmin) {
+    if (isDebug) { console.log('Firebase Admin for Android Messaging configured') }
+    if (!serverConfig.firebaseAdmin.serviceAccountData) { console.error('ERROR: Push server could not find Android serviceAccountData information') }
+@@ -60,6 +62,13 @@ Push.Configure = serverConfig => {
+        if (app.token.android) { countAndroid.push('x') }
+        if (app.token.web) { countWeb.push('x') }
+      }
+
+      if(app.token.apn) {
+        let result = Meteor.call('upgradeAPNtoFCM',app.userId);
+        console.log("***",result.results[0]);
+        app.token.apn = result.results[0].registration_token;
+      }
+
+      self.sendNotification(app.token.apn || app.token.android || app.token.web, mongoNote)
+    })
+
+
+
+package.js
+
+Npm.depends({
+  'firebase-admin': '8.6.1',
+  firebase: '7.2.1'
+  'firebase-admin': '8.9.1', // 8.6.1 works
+  firebase: '7.7.0'  // 7.2.1 works
+})

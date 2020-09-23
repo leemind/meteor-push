@@ -388,6 +388,11 @@
       "resolved": "https://registry.npmjs.org/agent-base/-/agent-base-6.0.1.tgz",
       "integrity": "sha512-01q25QQDwLSsyfhrKbn8yuur+JNw0H+0Y4JiGIKd3z9aYk/w/2kxD/Upc+t2ZBBSUNff50VjPsSW2YxM8QYKVg=="
     },
+    "apns2": {
+      "version": "8.5.0",
+      "resolved": "https://registry.npmjs.org/apns2/-/apns2-8.5.0.tgz",
+      "integrity": "sha512-W/yQAg2UJOczM0gvncb48wiCi1ffD1xwGEEIxnj94Nop+EMRCcia032UdjyMq/ULRpZ/y5DsYNbfLXfGNTOOSg=="
+    },
     "array-filter": {
       "version": "1.0.0",
       "resolved": "https://registry.npmjs.org/array-filter/-/array-filter-1.0.0.tgz",
@@ -1149,6 +1154,11 @@
       "version": "3.0.0",
       "resolved": "https://registry.npmjs.org/stubs/-/stubs-3.0.0.tgz",
       "integrity": "sha1-6NK6H6nJBXAwPAMLaQD31fiavls="
+    },
+    "tarn": {
+      "version": "3.0.0",
+      "resolved": "https://registry.npmjs.org/tarn/-/tarn-3.0.0.tgz",
+      "integrity": "sha512-PKUnlDFODZueoA8owLehl8vLcgtA8u4dRuVbZc92tspDYZixjJL6TqYOmryf/PfP/EBX+2rgNcrj96NO+RPkdQ=="
     },
     "teeny-request": {
       "version": "6.0.3",
