@@ -1,7 +1,7 @@
 /* globals Package, Npm, Cordova */
 Package.describe({
   name: 'leemind:push',
-  version: '2.0.8',
+  version: '2.0.9',
   summary: 'Push Notifications for Cordova and Web/PWA with Firebase (FCM).',
   git: 'https://github.com/leemind/meteor-push.git'
 })
@@ -20,7 +20,7 @@ Cordova.depends({
 })
 
 Package.onUse(api => {
-  api.versionsFrom('1.8')
+  api.versionsFrom(['1.8','2.3'])
   api.use(['ecmascript'])
 
   api.use(['tracker'], ['web.browser', 'web.cordova'])
