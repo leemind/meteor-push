@@ -1,6 +1,6 @@
 /* globals Package, Npm, Cordova */
 Package.describe({
-  name: 'activitree:push',
+  name: 'leemind:push',
   version: '2.0.10',
   summary: 'Push Notifications for Cordova and Web/PWA with Firebase (FCM).',
   git: 'https://github.com/activitree/meteor-push.git'
