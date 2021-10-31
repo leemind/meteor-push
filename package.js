@@ -4,14 +4,15 @@
 /* globals Package, Npm, Cordova */
 Package.describe({
   name: 'leemind:push',
-  version: '2.0.4',
+  version: '2.0.11',
   summary: 'Push Notifications for Cordova and Web/PWA with Firebase (FCM).',
   git: 'https://github.com/leemind/meteor-push.git'
 })
 
 Npm.depends({
-  'firebase-admin': '8.9.1', // 8.6.1 works
-  firebase: '7.7.0'  // 7.2.1 works
+  'firebase-admin': '9.12.0',
+  firebase: '9.1.2',
+  events: '3.3.0'
 })
 
 Cordova.depends({
@@ -20,9 +21,7 @@ Cordova.depends({
 })
 
 Package.onUse(api => {
-  api.versionsFrom('1.8')
-  api.use(['ecmascript'])
-
+  api.versionsFrom(['1.8', '2.3'])
   api.use(['tracker'], ['web.browser', 'web.cordova'])
   api.use(['accounts-base'], ['web.browser', 'web.cordova', 'server'], { weak: true })
 
@@ -31,11 +30,8 @@ Package.onUse(api => {
     'check',
     'mongo',
     'ejson',
-    'random',
-    'raix:eventstate@0.0.5',
+    'random'
   ], ['client', 'server'])
-
-  api.use('mongo', 'server')
 
   // API's
   api.addFiles('lib/server/pushToDevice.js', 'server')
