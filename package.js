@@ -7,9 +7,9 @@ Package.describe({
 })
 
 Npm.depends({
-  'firebase-admin': '9.11.0',
-  firebase: '8.8.1',
-  events: '3.3.0'
+  'firebase-admin': '9.12.0',
+  'firebase': '9.1.2',
+  'events': '3.3.0',
 })
 
 Cordova.depends({
@@ -18,7 +18,7 @@ Cordova.depends({
 })
 
 Package.onUse(api => {
-  api.versionsFrom(['1.8', '2.3'])
+  api.versionsFrom(['2.4'])
   api.use(['tracker'], ['web.browser', 'web.cordova'])
   api.use(['accounts-base'], ['web.browser', 'web.cordova', 'server'], { weak: true })
 
