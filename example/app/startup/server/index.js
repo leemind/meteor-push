@@ -31,7 +31,7 @@ Push.Configure({
     analyticsLabel: 'activitreeSomething',   // Android, IOS: Label associated with the message's analytics data.
 
     // ******* IOS Specifics ******
-    apnsPriority: '10',
+    apnsPriority: '5',
     topic: 'com.activitree',   // String = the IOS App id
     launchImage: '',           // IOS: String
     iosData: null,             // Data object targeted to the IOS notification

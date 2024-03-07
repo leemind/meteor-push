@@ -13,8 +13,9 @@ Npm.depends({
 })
 
 Cordova.depends({
-  '@havesource/cordova-plugin-push': 'https://github.com/havesource/cordova-plugin-push.git#86b52a7769fe80e975752f2d2db5b1abeb194802', // for IOS with SDK > 8.1.1
-  // '@havesource/cordova-plugin-push': '3.0.1', // for Android with SDK <=21.+
+  //'@havesource/cordova-plugin-push': 'https://github.com/havesource/cordova-plugin-push.git#86b52a7769fe80e975752f2d2db5b1abeb194802', // for IOS with SDK > 8.1.1
+  '@havesource/cordova-plugin-push': 'https://github.com/havesource/cordova-plugin-push.git#321035440aede5bc6437e228e6067f654753fef3', // DAL
+  // '@havesource/cordova-plugin-push': '4.0.1-dev.0', // DAL
   'cordova-plugin-device': '2.1.0'
 })
 
