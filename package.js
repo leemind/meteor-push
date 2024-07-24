@@ -1,26 +1,26 @@
 /* globals Package, Npm, Cordova */
 Package.describe({
   name: 'activitree:push',
-  version: '3.0.0-beta.0',
+  version: '3.0.0',
   summary: 'Push Notifications for Cordova and Web/PWA with Firebase (FCM).',
   git: 'https://github.com/activitree/meteor-push.git'
 })
 
 Npm.depends({
-  'firebase-admin': '11.11.0',
-  firebase: '10.4.0',
+  'firebase-admin': '12.2.0',
+  firebase: '10.12.4',
   events: '3.3.0'
 })
 
 Cordova.depends({
   //'@havesource/cordova-plugin-push': 'https://github.com/havesource/cordova-plugin-push.git#86b52a7769fe80e975752f2d2db5b1abeb194802', // for IOS with SDK > 8.1.1
-  '@havesource/cordova-plugin-push': 'https://github.com/havesource/cordova-plugin-push.git#321035440aede5bc6437e228e6067f654753fef3', // DAL
-  // '@havesource/cordova-plugin-push': '4.0.1-dev.0', // DAL
+  //'@havesource/cordova-plugin-push': 'https://github.com/havesource/cordova-plugin-push.git#321035440aede5bc6437e228e6067f654753fef3', // DAL
+  '@havesource/cordova-plugin-push': '4.0.0', // DAL
   'cordova-plugin-device': '2.1.0'
 })
 
 Package.onUse(api => {
-  api.versionsFrom(['2.14', '3.0-beta.0'])
+  api.versionsFrom(['3.0.1'])
   api.use(['tracker', 'ecmascript', 'ejson'], 'client')
   // api.use(['accounts-base'], ['client', 'server'], { weak: true })
 
